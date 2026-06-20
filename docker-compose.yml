@@ -9,8 +9,8 @@ services:
     networks:
       - sonar-network
     environment:
-      - SONAR_JDBC_USERNAME=sonar
-      - SONAR_JDBC_PASSWORD=sonar_secure_password
+      - SONAR_JDBC_USERNAME=admin
+      - SONAR_JDBC_PASSWORD=admin
       - SONAR_JDBC_URL=jdbc:postgresql://db:5432/sonar
     volumes:
       - sonarqube_data:/opt/sonarqube/data
@@ -29,8 +29,8 @@ services:
     networks:
       - sonar-network
     environment:
-      - POSTGRES_USER=sonar
-      - POSTGRES_PASSWORD=sonar_secure_password
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
       - POSTGRES_DB=sonar
     volumes:
       - postgres_data:/var/lib/postgresql/data
